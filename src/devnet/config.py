@@ -30,3 +30,4 @@ class TrainerConfig:
     log_interval: int = 1
     eval_interval: int = 1
     random_seed: int = torch.random.initial_seed()
+    

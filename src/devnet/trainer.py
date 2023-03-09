@@ -237,7 +237,7 @@ class Trainer:
         for i, (x, y) in enumerate(dataloader):
             x = x.to(self.config.device)
             y = y.to(self.config.device)
-
+            
             loss = self.forward(x, y)
             loss.backward()
             losses.append(loss.item())
