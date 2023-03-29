@@ -2,7 +2,7 @@ from setuptools import find_namespace_packages, setup, find_packages
 
 setup(
     name="devnet",
-    version="0.3.0",
+    version="0.3.1",
     description="Unofficial pytorch implementation of deviation network for table data.",
     author="Yuji Kamiya",
     author_email="y.kamiya0@gmail.com",

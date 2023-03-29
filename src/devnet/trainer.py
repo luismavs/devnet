@@ -196,8 +196,8 @@ class Trainer:
                 raise ValueError("model_path is necessary on predict")
 
             self._model = Model(
-                dataset.n_columns if loaded_data is None else loaded_data["n_input"],
-                None if loaded_data is None else loaded_data["model"],
+                n_input = dataset.n_columns if loaded_data is None else loaded_data["n_input"],
+                state_dict = None if loaded_data is None else loaded_data["model"],
             )
 
         assert (
