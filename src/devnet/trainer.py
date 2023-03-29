@@ -22,11 +22,21 @@ from .config import TrainerConfig
 
 
 class Model(nn.Module):
-    def __init__(self, n_input: int, state_dict=None):
+    def __init__(self, n_input: int, inner_neurons :int = 20, state_dict=None):
+        """Define a Devnet model
+
+            #TODO: option to add extra hidden laters
+
+        Args:
+            n_input: input dimension
+            inner_neurons: hidden layer dimensions. Defaults to 20.
+            state_dict: to switch between train and predict modes. Defaults to None.
+        """        
+
         super(Model, self).__init__()
         self.n_input = n_input
-        self.fc = nn.Linear(n_input, 20)
-        self.output = nn.Linear(20, 1)
+        self.fc = nn.Linear(n_input, inner_neurons)
+        self.output = nn.Linear(inner_neurons, 1)
 
         nn.init.xavier_uniform_(self.fc.weight, gain=nn.init.calculate_gain("relu"))
         nn.init.xavier_uniform_(self.output.weight, gain=nn.init.calculate_gain("relu"))
