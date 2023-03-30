@@ -46,3 +46,7 @@ jobs:
       run: |
         pip install pip-audit
         pip-audit
+
+    - name: Build wheel
+      run: |
+        python setup.py sdist bdist_wheel
