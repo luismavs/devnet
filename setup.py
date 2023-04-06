@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="devnet",
-    version="0.3.2",
+    version="0.4.0",
     description="Unofficial pytorch implementation of deviation network for table data.",
     author="Yuji Kamiya",
     author_email="y.kamiya0@gmail.com",
@@ -11,6 +11,7 @@ setup(
     license="MIT",
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
-    install_requires=["pandas", "torch", 'scikit-learn', 'logzero','hydra-core'],
+    install_requires=["pandas", "torch", 'scikit-learn', 'logzero'],
+    extras_require={"hydra": 'hydra-core'},
     zip_safe=False,
 )
