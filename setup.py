@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="devnet",
-    version="0.4.0",
+    name="inw-devnet",
+    version="0.4.1",
     description="Unofficial pytorch implementation of deviation network for table data.",
     author="Yuji Kamiya",
     author_email="y.kamiya0@gmail.com",
